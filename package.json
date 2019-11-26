@@ -20,5 +20,24 @@
   "homepage": "https://github.com/teambit/docs#readme",
   "devDependencies": {
     "docusaurus-init": "^1.12.0"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.4"
+    },
+    "overrides" : {
+      "*": {
+        "peerDependencies": {
+          "react": ">=16.0.0"
+        }
+      },
+      "assets/*" : {
+        "env": {
+          "compiler": "-"
+        }
+      }
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
